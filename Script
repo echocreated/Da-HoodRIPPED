@@ -1,0 +1,10 @@
+-- Create a new part every 0.1 seconds
+while true do
+    wait(0.1)  -- Wait for 0.1 seconds
+
+    local newPart = Instance.new("Part")
+    newPart.Size = Vector3.new(5, 5, 5)  -- Set the size of the part
+    newPart.Position = Vector3.new(math.random(-50, 50), 10, math.random(-50, 50))  -- Random position
+    newPart.Anchored = false  -- Make it unanchored
+    newPart.Parent = game.Workspace  -- Set the parent to the Workspace
+end
